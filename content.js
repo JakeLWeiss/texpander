@@ -1,21 +1,15 @@
 // content.js
-
 $(document).ready(function () {
-    var i = 0;
-    //sets a div id for all expando buttons on page load
-    $('.expando-button').each(function () {
-        $(this).attr('id', i);
-        i++;
+    //var for marking of the text post thats been collapsed
+    var ediv = '.collapsed';
+
+    //for each text post with expando
+    $(ediv).each(function () {
+        //when mouse is over, expand it
+        $(this).mouseover(function () {
+            $(this).click();
+            $(this).unbind(); //unbind its mouse over so its not super squirly
+        });
     });
-    
-   //clicks the expando
-    $('expando-button').click();
-
-
-   /* for (k = 0; k < i; k++) {
-        $('#' + k).click();
-        $('.expando').attr('style', 'type: block');
-               
-    }
-    */
+   
 });
