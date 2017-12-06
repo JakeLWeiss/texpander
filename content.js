@@ -4,11 +4,15 @@ $(document).ready(function () {
     var ediv = '.collapsed';
 
     //for each text post with expando
-    $(ediv).each(function () {
-        //when mouse is over, expand it
-        $(this).mouseover(function () {
+    $('.top-matter').mouseenter(function () {
+        //use this one for slecting full div, maybe a little annoying tho...? and change to $('thing').mouseenter above
+        //$(this).find('.top-matter').find(ediv).each(function () {
+   
+        //when mouse is over the post, expand it with click
+        $(this).find(ediv).each(function () { 
             $(this).click();
-            $(this).unbind(); //unbind its mouse over so its not super squirly
+            //unbind its mouse over so its not super squirly
+            $(this).unbind(); 
         });
     });
    
