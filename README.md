@@ -1,2 +1,2 @@
 # texpander
-a textpost expander for reddit using jquery that expands teext on mouseover
+a textpost expander for reddit using jquery for chrome
